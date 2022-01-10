@@ -66,8 +66,8 @@ async function fetchPublic(){
        document.getElementById("countdownB").style.display = 'block';
     }
     document.getElementById("mintRatio").innerHTML = totalSupply + '/' + maxSupply;
-    document.getElementById('percentageWidth').style.width = totalSupply/maxSupply*100+'%';
-    document.getElementById("percentage").innerHTML = totalSupply/maxSupply*100+'%';
+    document.getElementById('percentageWidth').style.width = fixed(totalSupply/maxSupply*100,2)+'%';
+    document.getElementById("percentage").innerHTML = fixed(totalSupply/maxSupply*100,2)+'%';
     document.getElementById("current_price").innerHTML = fixed(div(price,this.pow(10,18)),4) + ' BNB';
     document.getElementById("current_price_1").innerHTML = fixed(div(price,this.pow(10,18)),4) + ' BNB';
     
